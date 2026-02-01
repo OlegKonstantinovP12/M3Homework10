@@ -20,7 +20,8 @@ struct OnboardingView: View {
                         Image(.onboardImg)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: .infinity, height: 331)
+                            .frame(height: 331)
+                            .frame(maxWidth: .infinity)
                         
                         HStack(spacing: 4) {
                             Text("\(viewModel.packageCount) active packages")
@@ -42,7 +43,6 @@ struct OnboardingView: View {
                 
                 CustomButton(title: "Check your packages", image: Image(systemName: "arrow.right.circle.fill"), completion: {
                     path.append(1)
-                    print(path)
                 })
                 .padding(.horizontal, 20)
                 .navigationDestination(for: Int.self) { _ in

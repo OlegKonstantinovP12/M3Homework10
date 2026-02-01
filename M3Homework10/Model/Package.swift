@@ -7,29 +7,6 @@
 
 import Foundation
 
-enum TrackStatus: String {
-    case transit = "transit"
-    case arrived = "arrived"
-
-    func getColorStatusBackground() -> String {
-        switch self {
-        case .transit:
-            return "babyPeach"
-        case .arrived:
-            return "mintChocoChip"
-        }
-    }
-    
-    func getColorStatus() -> String {
-        switch self {
-        case .transit:
-            return "willpowerOrange"
-        case .arrived:
-            return "crispyMintGreen"
-        }
-    }
-}
-
 struct Package: Identifiable, Hashable {
     var id: String = UUID().uuidString
     let trackNumber: String

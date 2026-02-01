@@ -7,11 +7,7 @@
 
 import SwiftUI
 
-enum Poppins: String {
-    case regular = "Poppins-Regular"
-    case medium = "Poppins-Medium"
-    case semiBold = "Poppins-SemiBold"
-}
+
 
 extension Text {
     func poppins(_ type: Poppins, size: CGFloat) -> some View {

@@ -14,7 +14,6 @@ extension View {
     }
 }
 
-
 extension View {
     func getBackgroundColor(type: TrackStatus) -> some View {
         switch type {
